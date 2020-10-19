@@ -1,0 +1,182 @@
+﻿namespace Railroad
+{
+    partial class Form_Request
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.labelCustomer = new System.Windows.Forms.Label();
+            this.labelCustomerID = new System.Windows.Forms.Label();
+            this.labelRailcar = new System.Windows.Forms.Label();
+            this.comboBoxRailcarType = new System.Windows.Forms.ComboBox();
+            this.labelRailcarType = new System.Windows.Forms.Label();
+            this.textBoxCustomer = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerID = new System.Windows.Forms.TextBox();
+            this.textBoxRailcar = new System.Windows.Forms.TextBox();
+            this.buttonSend = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // labelCustomer
+            // 
+            this.labelCustomer.AutoSize = true;
+            this.labelCustomer.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomer.Location = new System.Drawing.Point(14, 18);
+            this.labelCustomer.Name = "labelCustomer";
+            this.labelCustomer.Size = new System.Drawing.Size(154, 23);
+            this.labelCustomer.TabIndex = 0;
+            this.labelCustomer.Text = "Customer Name:";
+            // 
+            // labelCustomerID
+            // 
+            this.labelCustomerID.AutoSize = true;
+            this.labelCustomerID.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerID.Location = new System.Drawing.Point(14, 58);
+            this.labelCustomerID.Name = "labelCustomerID";
+            this.labelCustomerID.Size = new System.Drawing.Size(124, 23);
+            this.labelCustomerID.TabIndex = 1;
+            this.labelCustomerID.Text = "Customer ID:";
+            // 
+            // labelRailcar
+            // 
+            this.labelRailcar.AutoSize = true;
+            this.labelRailcar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRailcar.Location = new System.Drawing.Point(14, 101);
+            this.labelRailcar.Name = "labelRailcar";
+            this.labelRailcar.Size = new System.Drawing.Size(103, 23);
+            this.labelRailcar.TabIndex = 2;
+            this.labelRailcar.Text = "Railcar ID:";
+            // 
+            // comboBoxRailcarType
+            // 
+            this.comboBoxRailcarType.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRailcarType.FormattingEnabled = true;
+            this.comboBoxRailcarType.Items.AddRange(new object[] {
+            "Type 1",
+            "Type 2",
+            "Type 3",
+            "Type 4"});
+            this.comboBoxRailcarType.Location = new System.Drawing.Point(175, 136);
+            this.comboBoxRailcarType.Name = "comboBoxRailcarType";
+            this.comboBoxRailcarType.Size = new System.Drawing.Size(121, 31);
+            this.comboBoxRailcarType.TabIndex = 3;
+            // 
+            // labelRailcarType
+            // 
+            this.labelRailcarType.AutoSize = true;
+            this.labelRailcarType.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRailcarType.Location = new System.Drawing.Point(14, 144);
+            this.labelRailcarType.Name = "labelRailcarType";
+            this.labelRailcarType.Size = new System.Drawing.Size(123, 23);
+            this.labelRailcarType.TabIndex = 4;
+            this.labelRailcarType.Text = "Railcar Type:";
+            // 
+            // textBoxCustomer
+            // 
+            this.textBoxCustomer.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomer.Location = new System.Drawing.Point(175, 12);
+            this.textBoxCustomer.Name = "textBoxCustomer";
+            this.textBoxCustomer.Size = new System.Drawing.Size(121, 29);
+            this.textBoxCustomer.TabIndex = 5;
+            // 
+            // textBoxCustomerID
+            // 
+            this.textBoxCustomerID.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerID.Location = new System.Drawing.Point(175, 52);
+            this.textBoxCustomerID.Name = "textBoxCustomerID";
+            this.textBoxCustomerID.Size = new System.Drawing.Size(121, 29);
+            this.textBoxCustomerID.TabIndex = 6;
+            // 
+            // textBoxRailcar
+            // 
+            this.textBoxRailcar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRailcar.Location = new System.Drawing.Point(175, 95);
+            this.textBoxRailcar.Name = "textBoxRailcar";
+            this.textBoxRailcar.Size = new System.Drawing.Size(121, 29);
+            this.textBoxRailcar.TabIndex = 7;
+            // 
+            // buttonSend
+            // 
+            this.buttonSend.BackColor = System.Drawing.Color.Gray;
+            this.buttonSend.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSend.ForeColor = System.Drawing.Color.White;
+            this.buttonSend.Location = new System.Drawing.Point(218, 188);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(78, 37);
+            this.buttonSend.TabIndex = 8;
+            this.buttonSend.Text = "Send";
+            this.buttonSend.UseVisualStyleBackColor = false;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Gray;
+            this.buttonClear.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.ForeColor = System.Drawing.Color.White;
+            this.buttonClear.Location = new System.Drawing.Point(18, 188);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(78, 37);
+            this.buttonClear.TabIndex = 9;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // Form_Request
+            // 
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(493, 328);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonSend);
+            this.Controls.Add(this.textBoxRailcar);
+            this.Controls.Add(this.textBoxCustomerID);
+            this.Controls.Add(this.textBoxCustomer);
+            this.Controls.Add(this.labelRailcarType);
+            this.Controls.Add(this.comboBoxRailcarType);
+            this.Controls.Add(this.labelRailcar);
+            this.Controls.Add(this.labelCustomerID);
+            this.Controls.Add(this.labelCustomer);
+            this.Name = "Form_Request";
+            this.Text = "Railroad Request Form";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label labelCustomer;
+        private System.Windows.Forms.Label labelCustomerID;
+        private System.Windows.Forms.Label labelRailcar;
+        private System.Windows.Forms.ComboBox comboBoxRailcarType;
+        private System.Windows.Forms.Label labelRailcarType;
+        private System.Windows.Forms.TextBox textBoxCustomer;
+        private System.Windows.Forms.TextBox textBoxCustomerID;
+        private System.Windows.Forms.TextBox textBoxRailcar;
+        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Button buttonClear;
+    }
+}
+
