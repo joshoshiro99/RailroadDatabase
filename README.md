@@ -6,6 +6,7 @@ Railroad service
 Synopsis: We are a small regional railroad that will be revitalizing an abandoned rail line extending from Fredonia, south for about 35 miles.  There are currently 8 customers in need of rail service along the line.  Currently, these customers hire a fleet of trucks to off load the railcars at the rail yard just outside of Fredonia and transport their raw materials back to their factories.  This is a very costly practice and having railcars delivered directly to their factory will save them a lot of money.  Our railroad is in need of a system where the customers can request railcar deliveries via an online form.  The system will then schedule the train for delivery.
 
 Details:
+
 • The customers have railcars delivered by another railroad company to the rail yard.  This railroad notifies the customers that their cars are delivered to the yard and they are given an ID number (4 alpha/numeric characters) for each car.  This information needs to be transmitted to our rail company for pickup and delivery to customer (via the form).
 
 • Due to track limitations, train length can be at most 14 railcars.  Minimum train length is to be 5 cars.  We also have limited locomotives and train crew so we can only transport 1 train per day.
