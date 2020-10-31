@@ -1,0 +1,4 @@
+Name: a Customer ID: 1 Railcar ID: 1 Priority: False Pickup: False Total Charge: 1500
+Name: b Customer ID: 2 Railcar ID: 2 Priority: True Pickup: True Total Charge: 3000
+Name: c Customer ID: 3 Railcar ID: 3 Priority: False Pickup: True Total Charge: 4500
+Name: d Customer ID: 4 Railcar ID: 4 Priority: False Pickup: True Total Charge: 2100
