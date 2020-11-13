@@ -87,14 +87,28 @@ namespace Railroad
                 railcar.Charge = railcar.CalculateCharge();
 
                 //add railcar to train 
-                request.train.Enqueue(railcar);
-
+                if (railcar.Priority) //if priority then add to front
+                {
+                    request.PriorityEnqueue(railcar);
+                }
+                else //add to rear
+                {
+                    request.EnqueueRailcar(railcar);
+                }
+                
 
                 //update form labels
                 lblOCustomer.Text = request.customer.ToString();
-                lstbxTrain.Items.Add(railcar.ToString());
+                if (railcar.Priority) //if priority then add to front
+                {
+                    lstbxTrain.Items.Insert(0, railcar.ToString());
+                }
+                else //add to rear
+                {
+                    lstbxTrain.Items.Add(railcar.ToString());
+                }
+                
                 lblOCharge.Text = "Total Charge: $" + request.GetTotal();
-
                 //create new railcar
                 railcar = new Railcar();
 

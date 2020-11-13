@@ -36,6 +36,10 @@ namespace Railroad
         {
             train.Enqueue(railcar);
         }
+        public void PriorityEnqueue(Railcar railcar)
+        {
+            train.Prepend(railcar);
+        }
         public string GetTotal()
         {
             Railcar current = train.Peek();
