@@ -14,8 +14,8 @@ namespace Railroad
         //-queue of railcars per order
 
         public Customer customer = new Customer();
-        public Queue<Railcar> train = new Queue<Railcar>();
-        public int total = 0;
+        private Queue<Railcar> train = new Queue<Railcar>();
+        private int total = 0;
 
         //still needs some sort of send request funtion
         public Request()
@@ -46,9 +46,16 @@ namespace Railroad
         }
         public string GetTotal()
         {
-            Railcar current = train.Peek();
-            total += current.Charge;
-            return total.ToString();
+            if (train.Count > 0)
+            {
+                Railcar current = train.Peek();
+                total += current.Charge;
+                return total.ToString();
+            }
+            else
+            {
+                return total.ToString();
+            }
         }
     }
 }

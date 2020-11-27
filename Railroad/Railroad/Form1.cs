@@ -27,8 +27,18 @@ namespace Railroad
         private void buttonSend_Click(object sender, EventArgs e)
         {
             string customerName = textBoxCustomer.Text;
-            int customerID = int.Parse(textBoxCustomerID.Text);
-            int railcarID = int.Parse(textBoxRailcar.Text);
+            int customerID = 0;
+            if(int.TryParse(textBoxCustomerID.Text, out int result))
+            {
+                customerID= int.Parse(textBoxCustomerID.Text);
+            }
+
+            int railcarID = 0;
+            if(int.TryParse(textBoxRailcar.Text, out int result1))
+            {
+                 railcarID = int.Parse(textBoxRailcar.Text);
+            }
+            
             bool priority = ckbxPriority.Checked;
             bool pickup = ckbxPickup.Checked;
 

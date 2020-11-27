@@ -1,1 +1,6 @@
 Name: oshi Customer ID: 4230 Railcar ID: 113 Priority: True Pickup: False Total Charge: $3000
+Name: oshi Customer ID: 4230 Railcar ID: 113 Priority: False Pickup: False Total Charge: $7250
+Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
+Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
+Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
+Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
