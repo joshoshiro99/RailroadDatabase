@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
@@ -11,43 +14,87 @@ namespace Railroad
         private Request request;
         private Railcar railcar;
 
-        //private StreamWriter outFile;
+
         public Form_Request()
         {
             InitializeComponent();
             textBoxCustomer.Focus();
-            //outFile = new StreamWriter("Customer Information.txt");
+
         }
         private void Form_Request_Load(object sender, EventArgs e)
         {
             request = new Request();
             railcar = new Railcar();
+            //Autofill
+            //For Customer Name Combobox --- can be linked to database
+            AutoCompleteStringCollection Namesource = new AutoCompleteStringCollection();
+            Namesource.AddRange(new string[]
+                            {
+                      //Customer.Customer_name.ToString()
+                      "Customer 1",
+                      "Customer 2",
+                      "Customer 3",
+                      "Customer 4",
+                      "Customer 5",
+                      "Customer 6",
+                      "Customer 7",
+                      "Customer 8"
+                            });
+            textBoxCustomer.AutoCompleteCustomSource = Namesource;
+
+            //For Customer ID textbox --- can be linked to database
+            AutoCompleteStringCollection IDsource = new AutoCompleteStringCollection();
+            IDsource.AddRange(new string[]
+                            {
+                      "123",
+                      "132",
+                      "213"
+                            });
+            textBoxCustomerID.AutoCompleteCustomSource = IDsource;
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
             string customerName = textBoxCustomer.Text;
-            int customerID = 0;
-            if(int.TryParse(textBoxCustomerID.Text, out int result))
-            {
-                customerID= int.Parse(textBoxCustomerID.Text);
-            }
-
-            int railcarID = 0;
-            if(int.TryParse(textBoxRailcar.Text, out int result1))
-            {
-                 railcarID = int.Parse(textBoxRailcar.Text);
-            }
-            
+            int customerID = int.Parse(textBoxCustomerID.Text);
+            int railcarID = int.Parse(textBoxRailcar.Text);
             bool priority = ckbxPriority.Checked;
             bool pickup = ckbxPickup.Checked;
 
             try
             {
-                File.AppendAllText("Customer Information.txt", ("Name: " + customerName.ToString() + " Customer ID: " + customerID.ToString() + " Railcar ID: " + railcarID.ToString() + " Priority: " + priority.ToString() + " Pickup: " + pickup.ToString() + " Total Charge: $" + request.GetTotal() + "\n"));
-                //The below will overwrite data 
-                //outFile.WriteLine("Name: " + customerName.ToString() + " Customer ID: " + customerID.ToString() + " Railcar ID: " + railcarID.ToString() + " Priority: " + priority.ToString() + " Pickup: " + pickup.ToString() + " Total Charge: " + request.GetTotal() + "\n");
-                //outFile.Close();
+                //add items from listbox to both text docs
+
+                foreach (var item in lstbxTrain.Items)
+                {
+                    File.AppendAllText("Customer Information.txt", ("\n" + item.ToString() + "\t" + DateTime.Now));
+                    //add total charge to the billing document                  
+                    File.AppendAllText("Billing Info.txt", ("\n" +"Company: " + customerName +"\t" + item.ToString()));
+                }
+
+                //this takes the file and deletes the blank spaces, which would otherwise mess the format up
+                string fileWithoutBlanks = File.ReadAllText("Customer Information.txt").Replace("\r\n\r\n", "\r\n");
+                File.Delete("Customer Information.txt");
+                File.WriteAllText("Customer Information.txt", fileWithoutBlanks);
+                
+
+                
+                //this splits the customer info file into 14 car trains
+                var trainfile = File.ReadAllLines("Customer Information.txt");
+                var sb = new StringBuilder();
+                for (int i = 1; i < (trainfile.Length - 1); i++)
+                {
+                    sb.Append(trainfile[i]);
+                    sb.Append(Environment.NewLine);
+                    if (i % 14 == 0)
+                    {
+                        sb.Append(Environment.NewLine);
+                    }
+                }
+                sb.Append(trainfile[trainfile.Length - 1]);
+                File.WriteAllText("Customer Information.txt", sb.ToString());
+
+
 
                 //clear old railcar data
                 textBoxCustomer.Text = "";
@@ -145,6 +192,11 @@ namespace Railroad
         private void ckbxPriority_CheckedChanged(object sender, EventArgs e)
         {
             railcar.Priority = ckbxPickup.Checked;
+        }
+
+        private void textBoxCustomer_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

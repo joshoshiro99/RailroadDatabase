@@ -1,6 +1,4 @@
-Name: oshi Customer ID: 4230 Railcar ID: 113 Priority: True Pickup: False Total Charge: $3000
-Name: oshi Customer ID: 4230 Railcar ID: 113 Priority: False Pickup: False Total Charge: $7250
-Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
-Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
-Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
-Name:  Customer ID: 0 Railcar ID: 0 Priority: False Pickup: False Total Charge: $0
+Car ID: 4	Pickup: True	  Priority: True	Amount Due: $1450	11/29/2020 2:23:45 PM
+Car ID: 3	Pickup: False	  Priority: True	Amount Due: $1150	11/29/2020 2:23:45 PM
+Car ID: 1	Pickup: False	  Priority: False	Amount Due: $750	11/29/2020 2:23:45 PM
+Car ID: 2	Pickup: True	  Priority: False	Amount Due: $1050	11/29/2020 2:23:45 PM
