@@ -1,10 +1,14 @@
 ﻿using System;
 using System.IO;
+using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Linq.Expressions;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using System.Windows.Forms.VisualStyles;
 
 namespace Railroad
@@ -60,20 +64,20 @@ namespace Railroad
             {
                 string customerName = textBoxCustomer.Text;
 
-            int customerID = 0;
-            if (int.TryParse(textBoxCustomerID.Text, out int result))
-            {
-                customerID = int.Parse(textBoxCustomerID.Text);
-            }
+                int customerID = 0;
+                if (int.TryParse(textBoxCustomerID.Text, out int result))
+                {
+                    customerID = int.Parse(textBoxCustomerID.Text);
+                }
 
-            int railcarID = 0;
-            if (int.TryParse(textBoxRailcar.Text, out int result1))
-            {
-                railcarID = int.Parse(textBoxRailcar.Text);
-            }
+                int railcarID = 0;
+                if (int.TryParse(textBoxRailcar.Text, out int result1))
+                {
+                    railcarID = int.Parse(textBoxRailcar.Text);
+                }
 
-            bool priority = ckbxPriority.Checked;
-            bool pickup = ckbxPickup.Checked;
+                bool priority = ckbxPriority.Checked;
+                bool pickup = ckbxPickup.Checked;
 
                 //add items from listbox to both text docs
                 foreach (var item in lstbxTrain.Items)

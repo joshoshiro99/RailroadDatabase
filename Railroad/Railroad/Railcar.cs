@@ -31,7 +31,7 @@ namespace Railroad
 
             }
         }
-        public int Charge { get; set; };
+        public int Charge { get; set; }
         public int RailcarID
         {
             get

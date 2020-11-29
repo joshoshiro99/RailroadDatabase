@@ -38,7 +38,10 @@ namespace Railroad
         }
         public void PriorityEnqueue(Railcar railcar)
         {
-            train.Prepend(railcar);
+            if (train.Count > 0) //if the train is not empty, prepend	  
+                train.Prepend(railcar);
+            else
+                train.Enqueue(railcar);
         }
         public string GetTotal()
         {
