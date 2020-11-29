@@ -1,2 +1,0 @@
-ID: 231   Pickup: False  Priority: True
-ID: 321   Pickup: False  Priority: False
