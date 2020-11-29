@@ -1,0 +1,13 @@
+
+ID: 123   Pickup: False  Priority: FalseTotal Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 321   Pickup: False  Priority: False Total Charge: 750
+ID: 231   Pickup: False  Priority: True Total Charge: 750
+ID: 321   Pickup: False  Priority: False Total Charge: 750
+ID: 114   Pickup: False  Priority: True Total Charge: 750
+ID: 114   Pickup: True  Priority: True Total Charge: 750
+ID: 113   Pickup: True  Priority: False Total Charge: 750
