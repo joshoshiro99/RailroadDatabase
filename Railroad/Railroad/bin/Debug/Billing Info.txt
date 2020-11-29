@@ -1,0 +1,5 @@
+
+Company: GENERIC	Car ID: 4	Pickup: True	  Priority: True	Amount Due: $1450
+Company: GENERIC	Car ID: 3	Pickup: False	  Priority: True	Amount Due: $1150
+Company: GENERIC	Car ID: 1	Pickup: False	  Priority: False	Amount Due: $750
+Company: GENERIC	Car ID: 2	Pickup: True	  Priority: False	Amount Due: $1050

@@ -31,7 +31,7 @@ namespace Railroad
 
             }
         }
-        public int Charge { get; set; } = 750;
+        public int Charge { get; set; };
         public int RailcarID
         {
             get
@@ -56,11 +56,12 @@ namespace Railroad
         }
         public int CalculateCharge()
         {
-            if (pickup)
+            Charge = 750;
+            if (pickup==true)
             {
                 Charge += 300;
             }
-            if (priority)
+            if (priority==true)
             {
                 Charge += 400;
             }
@@ -68,7 +69,8 @@ namespace Railroad
         }
         public override string ToString()
         {
-            return "ID: " + railcarID + "   Pickup: " + pickup + "  Priority: " + priority;
+            return "Car ID: " + railcarID +"\t" +"Pickup: " + pickup +"\t" + "  Priority: " + priority +"\t" + "Amount Due: $"+ CalculateCharge();
         }
+
     }
 }

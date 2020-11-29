@@ -81,6 +81,7 @@
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(121, 29);
             this.textBoxCustomer.TabIndex = 5;
+            this.textBoxCustomer.TextChanged += new System.EventHandler(this.textBoxCustomer_TextChanged);
             // 
             // textBoxCustomerID
             // 
@@ -188,13 +189,13 @@
             this.lstbxTrain.ItemHeight = 15;
             this.lstbxTrain.Location = new System.Drawing.Point(387, 52);
             this.lstbxTrain.Name = "lstbxTrain";
-            this.lstbxTrain.Size = new System.Drawing.Size(271, 199);
+            this.lstbxTrain.Size = new System.Drawing.Size(470, 199);
             this.lstbxTrain.TabIndex = 20;
             // 
             // Form_Request
             // 
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(703, 328);
+            this.ClientSize = new System.Drawing.Size(883, 337);
             this.Controls.Add(this.lstbxTrain);
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.lblOCharge);
