@@ -1,8 +1,10 @@
 
-Company: GENERIC	Car ID: 4	Pickup: True	  Priority: True	Amount Due: $1450
-Company: GENERIC	Car ID: 3	Pickup: False	  Priority: True	Amount Due: $1150
-Company: GENERIC	Car ID: 1	Pickup: False	  Priority: False	Amount Due: $750
-Company: GENERIC	Car ID: 2	Pickup: True	  Priority: False	Amount Due: $1050
-Company: jjj	Car ID: 13	Pickup: False	  Priority: True	Amount Due: $1150
-Company: jjj	Car ID: 11	Pickup: False	  Priority: False	Amount Due: $750
-Company: jjj	Car ID: 12	Pickup: True	  Priority: False	Amount Due: $1050
+ID: 123   Pickup: False  Priority: FalseTotal Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 212   Pickup: False  Priority: False Total Charge: 750
+ID: 321   Pickup: False  Priority: False Total Charge: 750
+ID: 231   Pickup: False  Priority: True Total Charge: 750
+ID: 321   Pickup: False  Priority: False Total Charge: 750

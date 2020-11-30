@@ -56,12 +56,11 @@ namespace Railroad
         }
         public int CalculateCharge()
         {
-            Charge = 750;
-            if (pickup==true)
+            if (pickup)
             {
                 Charge += 300;
             }
-            if (priority==true)
+            if (priority)
             {
                 Charge += 400;
             }
@@ -69,8 +68,7 @@ namespace Railroad
         }
         public override string ToString()
         {
-            return "Car ID: " + railcarID +"\t" +"Pickup: " + pickup +"\t" + "  Priority: " + priority +"\t" + "Amount Due: $"+ CalculateCharge();
+            return "ID: " + railcarID + "   Pickup: " + pickup + "  Priority: " + priority;
         }
-
     }
 }
