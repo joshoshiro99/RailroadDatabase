@@ -78,9 +78,9 @@ namespace Railroad
                 //add items from listbox to both text docs
                 foreach (var item in lstbxTrain.Items)
                 {
-                    File.AppendAllText("Customer Information.txt", ("\n" + item.ToString()));
-                    //add total charge to the billing document
-                    File.AppendAllText("Billing Info.txt", ("\n" + item.ToString() + " Total Charge: " + railcar.CalculateCharge()));
+                    File.AppendAllText("Customer Information.txt", ("\n" + item.ToString() + "\t" + DateTime.Now));
+                    //add total charge to the billing document                  
+                    File.AppendAllText("Billing Info.txt", ("\n" +"Company: " + customerName +"\t" + item.ToString()));
                 }
 
                 //this takes the file and deletes the blank spaces, which would otherwise mess the format up
