@@ -25,25 +25,62 @@ namespace Railroad
         {
             request = new Request();
             railcar = new Railcar();
+
+            //Autofill
+            //For Customer Name Combobox --- can be linked to database
+            AutoCompleteStringCollection Namesource = new AutoCompleteStringCollection();
+            Namesource.AddRange(new string[]
+                            {
+                      //Customer.Customer_name.ToString()
+                      "Customer 1",
+                      "Customer 2",
+                      "Customer 3",
+                      "Customer 4",
+                      "Customer 5",
+                      "Customer 6",
+                      "Customer 7",
+                      "Customer 8"
+                            });
+            textBoxCustomer.AutoCompleteCustomSource = Namesource;
+
+            //For Customer ID textbox --- can be linked to database
+            AutoCompleteStringCollection IDsource = new AutoCompleteStringCollection();
+            IDsource.AddRange(new string[]
+                            {
+                      "123",
+                      "132",
+                      "213"
+                            });
+            textBoxCustomerID.AutoCompleteCustomSource = IDsource;
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            string customerName = textBoxCustomer.Text;
-            int customerID = int.Parse(textBoxCustomerID.Text);
-            int railcarID = int.Parse(textBoxRailcar.Text);
+            try
+            {
+                string customerName = textBoxCustomer.Text;
+
+            int customerID = 0;
+            if (int.TryParse(textBoxCustomerID.Text, out int result))
+            {
+                customerID = int.Parse(textBoxCustomerID.Text);
+            }
+
+            int railcarID = 0;
+            if (int.TryParse(textBoxRailcar.Text, out int result1))
+            {
+                railcarID = int.Parse(textBoxRailcar.Text);
+            }
+
             bool priority = ckbxPriority.Checked;
             bool pickup = ckbxPickup.Checked;
 
-            try
-            {
                 //add items from listbox to both text docs
-
                 foreach (var item in lstbxTrain.Items)
                 {
-                    File.AppendAllText("Customer Information.txt", ("\n" + item.ToString() + "\t" + DateTime.Now));
-                    //add total charge to the billing document                  
-                    File.AppendAllText("Billing Info.txt", ("\n" +"Company: " + customerName +"\t" + item.ToString()));
+                    File.AppendAllText("Customer Information.txt", ("\n" + item.ToString()));
+                    //add total charge to the billing document
+                    File.AppendAllText("Billing Info.txt", ("\n" + item.ToString() + " Total Charge: " + railcar.CalculateCharge()));
                 }
 
                 //this takes the file and deletes the blank spaces, which would otherwise mess the format up
@@ -68,14 +105,17 @@ namespace Railroad
                 sb.Append(trainfile[trainfile.Length - 1]);
                 File.WriteAllText("Customer Information.txt", sb.ToString());
 
-
-
                 //clear old railcar data
                 textBoxCustomer.Text = "";
                 textBoxCustomerID.Text = "";
                 textBoxRailcar.Text = "";
                 ckbxPickup.Checked = false;
                 ckbxPriority.Checked = false;
+                
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("Please press the Add button before the Send button.", "Error");
             }
             catch (DirectoryNotFoundException ex)
             {
@@ -83,7 +123,8 @@ namespace Railroad
             }
             catch (FormatException ex)
             {
-                MessageBox.Show(ex.Message);
+                string title = "Data Format Error";
+                MessageBox.Show("Error, make sure your information is correct.", title);
             }
             catch (InvalidDataException ex)
             {
@@ -149,7 +190,7 @@ namespace Railroad
             catch (FormatException)
             {
                 string title = "Data Format Error";
-                MessageBox.Show("Error, invalid data type entered. Make sure your information is correct.", title);
+                MessageBox.Show("Error, make sure your information is correct.", title);
             }
             catch (InvalidDataException)
             {
@@ -168,9 +209,55 @@ namespace Railroad
             railcar.Priority = ckbxPickup.Checked;
         }
 
-        private void textBoxCustomer_TextChanged(object sender, EventArgs e)
+        private void textBoxCustomerID_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //only allow number input 
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) &&
+                ch != Convert.ToChar(Keys.Back) &&
+                    ch != Convert.ToChar(Keys.Delete))
+                e.Handled = true;
+        }
 
+        private void textBoxRailcar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //only allow number input
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) &&
+                ch != Convert.ToChar(Keys.Back) &&
+                    ch != Convert.ToChar(Keys.Delete))
+                e.Handled = true;
+        }
+
+        private void insertRequestedInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxCustomer.Focus();
+        }
+
+        private void checkIfYouWouldLikePriorityDeliveryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            ckbxPriority.Focus();
+        }
+
+        private void checkRequestPickupIfYouWouldLikeTheDeliveryToBePickedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ckbxPriority.Focus();
+        }
+
+        private void clickAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAddCar.Focus();
+        }
+
+        private void clickSendToSendTheRequestToTheTrainMainfestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonSend.Focus();
+        }
+
+        private void clickClearToClearTextAndUncheckChoicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonClear.Focus();
         }
     }
 }

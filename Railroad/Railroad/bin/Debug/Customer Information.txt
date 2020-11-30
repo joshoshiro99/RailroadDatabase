@@ -1,6 +1,2 @@
-Car ID: 3	Pickup: False	  Priority: True	Amount Due: $1150	11/29/2020 2:23:45 PM
-Car ID: 1	Pickup: False	  Priority: False	Amount Due: $750	11/29/2020 2:23:45 PM
-Car ID: 2	Pickup: True	  Priority: False	Amount Due: $1050	11/29/2020 2:23:45 PM
-Car ID: 13	Pickup: False	  Priority: True	Amount Due: $1150	11/29/2020 7:03:06 PM
-Car ID: 11	Pickup: False	  Priority: False	Amount Due: $750	11/29/2020 7:03:06 PM
-Car ID: 12	Pickup: True	  Priority: False	Amount Due: $1050	11/29/2020 7:03:06 PM
+ID: 231   Pickup: False  Priority: True
+ID: 321   Pickup: False  Priority: False
