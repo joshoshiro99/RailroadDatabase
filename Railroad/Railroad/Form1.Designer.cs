@@ -201,7 +201,7 @@
             this.lstbxTrain.ItemHeight = 15;
             this.lstbxTrain.Location = new System.Drawing.Point(395, 74);
             this.lstbxTrain.Name = "lstbxTrain";
-            this.lstbxTrain.Size = new System.Drawing.Size(271, 199);
+            this.lstbxTrain.Size = new System.Drawing.Size(452, 199);
             this.lstbxTrain.TabIndex = 20;
             // 
             // menuStrip1
@@ -211,7 +211,7 @@
             this.toolStripMenuItemHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(703, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(943, 24);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -277,7 +277,7 @@
             // Form_Request
             // 
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(703, 337);
+            this.ClientSize = new System.Drawing.Size(943, 337);
             this.Controls.Add(this.lstbxTrain);
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.lblOCharge);
