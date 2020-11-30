@@ -31,7 +31,7 @@ namespace Railroad
 
             }
         }
-        public int Charge { get; set; }
+        public int Charge { get; set; } = 750;
         public int RailcarID
         {
             get
@@ -57,11 +57,11 @@ namespace Railroad
         public int CalculateCharge()
         {
             Charge = 750;
-            if (pickup)
+            if (pickup==true)
             {
                 Charge += 300;
             }
-            if (priority)
+            if (priority==true)
             {
                 Charge += 400;
             }
@@ -71,5 +71,6 @@ namespace Railroad
         {
             return "Car ID: " + railcarID +"\t" +"Pickup: " + pickup +"\t" + "  Priority: " + priority +"\t" + "Amount Due: $"+ CalculateCharge();
         }
+
     }
 }
